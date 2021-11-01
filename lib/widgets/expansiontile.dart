@@ -6,13 +6,15 @@ class Expan extends StatefulWidget {
   final String classT;
   final String age;
   final String device;
+  final void Function()? onTap;
   const Expan(
       {Key? key,
       required this.nameS,
       required this.nameT,
       required this.classT,
       required this.age,
-      required this.device})
+      required this.device,
+      this.onTap})
       : super(key: key);
 
   @override
@@ -55,10 +57,28 @@ class _ExpanState extends State<Expan> {
                   child: Column(
                     children: [
                       Container(
-                        child: Text("${widget.nameS}"),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Flexible(
+                              child: Text("${widget.nameS}"),
+                            ),
+                            Flexible(
+                              child: Text("${widget.nameS}"),
+                            ),
+                            Flexible(
+                              child: Text("${widget.nameS}"),
+                            ),Flexible(
+                              child: Text("${widget.nameS}"),
+                            ),
+                            Flexible(
+                              child: Text("${widget.nameS}"),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                     ],
                   ),
@@ -67,6 +87,7 @@ class _ExpanState extends State<Expan> {
               onExpansionChanged: (isExpanded) {
                 setState(() {
                   _hide = !_hide;
+                  widget.onTap;
                 });
               },
             ),

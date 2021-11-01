@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:modx/test.dart';
+import 'package:modx/screens/test.dart';
 
 void main() {
   runApp(const MyApp());

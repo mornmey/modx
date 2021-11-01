@@ -48,3 +48,20 @@ class TestModel {
             classT: 'E'),
       ];
 }
+
+abstract class Person {
+  int? id;
+  String? name;
+  String? deviceOS;
+  int? age;
+  int? classroomID;
+  Person({
+    this.age,
+    this.name,
+    this.classroomID,
+    this.deviceOS,
+    this.id,
+  });
+}
+
+class Teacher extends Person {}
